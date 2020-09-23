@@ -1,3 +1,3 @@
 #! /bin/sh
-exec ./confScript.sh &
-exec ./launch.sh
+exec ~/.config/polybar/confScript.sh &
+exec ~/.config/polybar/launch.sh

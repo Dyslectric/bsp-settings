@@ -18,31 +18,93 @@ magenta = #c0FA5477
 cyan = #c064B9F2 
 white = #c0D2D2D4 
 
-blackBorder = #f0333B47
+blackBorder = #ff333B47
 
 [elements]
 border = 3
-radius = 10
+radius = 15
 gaps = 20
 
+;;;;; sizes ;;;;;
+
+; xwindow height
 height0 = 24
+
+; bspwm height
 height1 = 28
+
+; border1 height
 height2 = 58
+
+; activeBorder height
 height3 = 48
+
+; dateBar height
+height4 = 58
+
+; timeBar height
+height5 = 35
+
+; xwindow and bspwm width
 width0 = 19.51%
+
+; activeBorder width
 width1 = 19%
 
+; dateBar width
+width2 = 15%
 
+; timeBar width
+width3 = 150
+
+;;;;; offsets ;;;;;
+
+; bspwm yoffset
 yoffset0 = 50
+
+; border1 yoffset
 yoffset1 = 23
+
+; activeBorder and yoffset
 yoffset2 = 10
+
+; dateBarShadow yoffset
+yoffset3 = 24
+
+; border2 yoffset
+yoffset4 = 30
+
+; xwindow and bspwm xoffset
 xoffset0 = 20
+
+; border1 xoffset
 xoffset1 = 25
+
+; activeBorder xoffset
 xoffset2 = 10
 
+; dateBar xoffset
+xoffset3 = 42.5%
+
+; dateBarShadow xoffset
+xoffset4 = 42.7%
+
+; timeBar xoffset
+xoffset5 = 1750
+
+; border2 xoffset
+xoffset6 = 1754
+
+; xwindow font
 font0 = Source Sans Pro:pixelsize=12;3
+
+; bspwm font
 font1 = Source Sans Pro:pixelsize=14;3
 
+; time font
+font2 = Source Sans Pro:pixelsize=16;3
+
+; Padding on bspwm workspace elements
 bspwmpad = 4
 [module/xwindow]
 type = internal/xwindow
@@ -69,6 +131,19 @@ label-urgent-padding = ${elements.bspwmpad}
 label-empty = %index%
 label-empty-background = ${colors.background-alt}
 label-empty-padding = ${elements.bspwmpad}
+
+[module/date]
+type = internal/date
+date = "%A,  %B %d,  %Y"
+
+[module/time]
+type = internal/date
+interval = 1
+
+time = " %I:%M  %p "
+
+format-prefix = 
+label = %time%
 
 [module/placeholder]
 type = custom/text
@@ -116,6 +191,37 @@ font-0 = ${elements.font1}
 
 modules-left = bspwm
 
+[bartype/dateBar]
+width = ${elements.width2}
+height = ${elements.height4}
+offset-x = ${elements.xoffset3}
+offset-y = ${elements.gaps}
+
+background = ${colors.blackBorder}
+foreground = ${colors.foreground-alt}
+
+font-0 = ${elements.font1}
+
+radius = ${elements.radius}
+
+modules-center = date
+
+[bartype/timeBar]
+width = ${elements.width3}
+height = ${elements.height5}
+offset-x = ${elements.xoffset5}
+offset-y = ${elements.yoffset3}
+
+background = ${colors.background-alt}
+foreground = ${colors.foreground-alt}
+
+border-color = ${colors.cyan}
+border-size = ${elements.border}
+
+font-0 = ${elements.font2}
+
+modules-center = time
+
 [bartype/border1]
 width = ${elements.width0}
 height = ${elements.height2}
@@ -131,6 +237,34 @@ border-bottom-size = 5
 
 modules-left = placeholder
 
+[bartype/border2]
+width = ${elements.width3}
+height = ${elements.height5}
+offset-x = ${elements.xoffset6}
+offset-y = ${elements.yoffset4}
+
+background = ${colors.background}
+foreground = ${colors.background}
+
+border-color = ${colors.blackBorder}
+border-right-size = 4
+border-bottom-size = 4
+
+modules-left = placeholder
+
+[bartype/dateBarShadow]
+width = ${elements.width2}
+height = ${elements.height4}
+offset-x = ${elements.xoffset4}
+offset-y = ${elements.yoffset3}
+
+background = ${colors.white}
+foreground = ${colors.background}
+
+radius = ${elements.radius}
+
+modules-center = placeholder
+
 [bartype/activeBorder]
 width = ${elements.width1}
 height = ${elements.height3}
@@ -145,66 +279,137 @@ border-left-size = 10
 border-top-size = 10
 
 modules-left = placeholder
+[monitor]
+1 = ${env:MONITOR:DisplayPort-0}
+2 = ${env:MONITOR:DisplayPort-1}
+3 = ${env:MONITOR:DisplayPort-2}
+4 = ${env:MONITOR:HDMI-A-0}
+
 [bar/xwindow1]
-monitor = ${env:MONITOR:DisplayPort-0}
+monitor = ${monitor.1}
 inherit = bartype/xwindow
 
 [bar/bspwm1]
-monitor = ${env:MONITOR:DisplayPort-0}
+monitor = ${monitor.1}
 inherit = bartype/bspwm
 
 [bar/leftBorder1]
-monitor = ${env:MONITOR:DisplayPort-0}
+monitor = ${monitor.1}
 inherit = bartype/border1
 
+[bar/date1]
+monitor = ${monitor.1}
+inherit = bartype/dateBar
+
 [bar/active1]
-monitor = ${env:MONITOR:DisplayPort-0}
+monitor = ${monitor.1}
 inherit = bartype/activeBorder
 
 [bar/xwindow2]
-monitor = ${env:MONITOR:DisplayPort-1}
+monitor = ${monitor.2}
 inherit = bartype/xwindow
 
 [bar/bspwm2]
-monitor = ${env:MONITOR:DisplayPort-1}
+monitor = ${monitor.2}
 inherit = bartype/bspwm
 
 [bar/leftBorder2]
-monitor = ${env:MONITOR:DisplayPort-1}
+monitor = ${monitor.2}
 inherit = bartype/border1
 
 [bar/active2]
-monitor = ${env:MONITOR:DisplayPort-1}
+monitor = ${monitor.2}
 inherit = bartype/activeBorder
 
 [bar/xwindow3]
-monitor = ${env:MONITOR:DisplayPort-2}
+monitor = ${monitor.3}
 inherit = bartype/xwindow
 
 [bar/bspwm3]
-monitor = ${env:MONITOR:DisplayPort-2}
+monitor = ${monitor.3}
 inherit = bartype/bspwm
 
 [bar/leftBorder3]
-monitor = ${env:MONITOR:DisplayPort-2}
+monitor = ${monitor.3}
 inherit = bartype/border1
 
 [bar/active3]
-monitor = ${env:MONITOR:DisplayPort-2}
+monitor = ${monitor.3}
 inherit = bartype/activeBorder
 
 [bar/xwindow4]
-monitor = ${env:MONITOR:HDMI-A-0}
+monitor = ${monitor.4}
 inherit = bartype/xwindow
 
 [bar/bspwm4]
-monitor = ${env:MONITOR:HDMI-A-0}
+monitor = ${monitor.4}
 inherit = bartype/bspwm
 
 [bar/leftBorder4]
-monitor = ${env:MONITOR:HDMI-A-0}
+monitor = ${monitor.4}
 inherit = bartype/border1
 
 [bar/active4]
-monitor = ${env:MONITOR:HDMI-A-0}
+monitor = ${monitor.4}
 inherit = bartype/activeBorder
+
+[bar/date2]
+monitor = ${monitor.2}
+inherit = bartype/dateBar
+
+[bar/date3]
+monitor = ${monitor.3}
+inherit = bartype/dateBar
+
+[bar/date4]
+monitor = ${monitor.4}
+inherit = bartype/dateBar
+
+[bar/dateShadow1]
+monitor = ${monitor.1}
+inherit = bartype/dateBarShadow
+
+[bar/dateShadow2]
+monitor = ${monitor.2}
+inherit = bartype/dateBarShadow
+
+[bar/dateShadow3]
+monitor = ${monitor.3}
+inherit = bartype/dateBarShadow
+
+[bar/dateShadow4]
+monitor = ${monitor.4}
+inherit = bartype/dateBarShadow
+
+[bar/timeBar1]
+monitor = ${monitor.1}
+inherit = bartype/timeBar
+
+[bar/timeBar2]
+monitor = ${monitor.2}
+inherit = bartype/timeBar
+
+[bar/timeBar3]
+monitor = ${monitor.3}
+inherit = bartype/timeBar
+
+[bar/timeBar4]
+monitor = ${monitor.4}
+inherit = bartype/timeBar
+
+[bar/rightBorder1]
+monitor = ${monitor.1}
+inherit = bartype/border2
+
+[bar/rightBorder2]
+monitor = ${monitor.2}
+inherit = bartype/border2
+
+[bar/rightBorder3]
+monitor = ${monitor.3}
+inherit = bartype/border2
+
+[bar/rightBorder4]
+monitor = ${monitor.4}
+inherit = bartype/border2
+

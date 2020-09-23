@@ -109,3 +109,6 @@ alt + control + shift + s
 
 alt + shift + s
 	flameshot screen
+
+alt + {_,shift +} {1-9}
+	bspc {desktop -f,node -d} '{1-9}.local'

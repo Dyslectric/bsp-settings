@@ -14,10 +14,17 @@ bspc config split_ratio		0.5
 bspc config borderless_monocle	true
 bspc config gapless_monocle	true
 
+bspc config pointer_motion_interval 1
+bspc config pointer_modifier mod1
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_corner
+
 picom &
 exec ~/.fehbg &
-exec ~/.config/polybar/launch.sh &
-exec ~/.scripts/cleanfullscreen.sh &
+exec ~/.config/polybar/scripty.sh &
 exec flameshot &
+sleep 0.3
 killall activeMonScript.sh
 exec .scripts/activeMonScript.sh &
+exec ~/.scripts/cleanfullscreen.sh &
+

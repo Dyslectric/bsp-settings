@@ -12,29 +12,91 @@ magenta = #c0FA5477
 cyan = #c064B9F2 
 white = #c0D2D2D4 
 
-blackBorder = #f0333B47
+blackBorder = #ff333B47
 
 [elements]
 border = 3
-radius = 10
+radius = 15
 gaps = 20
 
+;;;;; sizes ;;;;;
+
+; xwindow height
 height0 = 24
+
+; bspwm height
 height1 = 28
+
+; border1 height
 height2 = 58
+
+; activeBorder height
 height3 = 48
+
+; dateBar height
+height4 = 58
+
+; timeBar height
+height5 = 35
+
+; xwindow and bspwm width
 width0 = 19.51%
+
+; activeBorder width
 width1 = 19%
 
+; dateBar width
+width2 = 15%
 
+; timeBar width
+width3 = 150
+
+;;;;; offsets ;;;;;
+
+; bspwm yoffset
 yoffset0 = 50
+
+; border1 yoffset
 yoffset1 = 23
+
+; activeBorder and yoffset
 yoffset2 = 10
+
+; dateBarShadow yoffset
+yoffset3 = 24
+
+; border2 yoffset
+yoffset4 = 30
+
+; xwindow and bspwm xoffset
 xoffset0 = 20
+
+; border1 xoffset
 xoffset1 = 25
+
+; activeBorder xoffset
 xoffset2 = 10
 
+; dateBar xoffset
+xoffset3 = 42.5%
+
+; dateBarShadow xoffset
+xoffset4 = 42.7%
+
+; timeBar xoffset
+xoffset5 = 1750
+
+; border2 xoffset
+xoffset6 = 1754
+
+; xwindow font
 font0 = Source Sans Pro:pixelsize=12;3
+
+; bspwm font
 font1 = Source Sans Pro:pixelsize=14;3
 
+; time font
+font2 = Source Sans Pro:pixelsize=16;3
+
+; Padding on bspwm workspace elements
 bspwmpad = 4

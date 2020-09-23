@@ -41,6 +41,37 @@ font-0 = ${elements.font1}
 
 modules-left = bspwm
 
+[bartype/dateBar]
+width = ${elements.width2}
+height = ${elements.height4}
+offset-x = ${elements.xoffset3}
+offset-y = ${elements.gaps}
+
+background = ${colors.blackBorder}
+foreground = ${colors.foreground-alt}
+
+font-0 = ${elements.font1}
+
+radius = ${elements.radius}
+
+modules-center = date
+
+[bartype/timeBar]
+width = ${elements.width3}
+height = ${elements.height5}
+offset-x = ${elements.xoffset5}
+offset-y = ${elements.yoffset3}
+
+background = ${colors.background-alt}
+foreground = ${colors.foreground-alt}
+
+border-color = ${colors.cyan}
+border-size = ${elements.border}
+
+font-0 = ${elements.font2}
+
+modules-center = time
+
 [bartype/border1]
 width = ${elements.width0}
 height = ${elements.height2}
@@ -55,6 +86,34 @@ border-right-size = 5
 border-bottom-size = 5
 
 modules-left = placeholder
+
+[bartype/border2]
+width = ${elements.width3}
+height = ${elements.height5}
+offset-x = ${elements.xoffset6}
+offset-y = ${elements.yoffset4}
+
+background = ${colors.background}
+foreground = ${colors.background}
+
+border-color = ${colors.blackBorder}
+border-right-size = 4
+border-bottom-size = 4
+
+modules-left = placeholder
+
+[bartype/dateBarShadow]
+width = ${elements.width2}
+height = ${elements.height4}
+offset-x = ${elements.xoffset4}
+offset-y = ${elements.yoffset3}
+
+background = ${colors.white}
+foreground = ${colors.background}
+
+radius = ${elements.radius}
+
+modules-center = placeholder
 
 [bartype/activeBorder]
 width = ${elements.width1}

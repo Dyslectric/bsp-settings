@@ -1,63 +1,134 @@
+[monitor]
+1 = ${env:MONITOR:DisplayPort-0}
+2 = ${env:MONITOR:DisplayPort-1}
+3 = ${env:MONITOR:DisplayPort-2}
+4 = ${env:MONITOR:HDMI-A-0}
+
 [bar/xwindow1]
-monitor = ${env:MONITOR:DisplayPort-0}
+monitor = ${monitor.1}
 inherit = bartype/xwindow
 
 [bar/bspwm1]
-monitor = ${env:MONITOR:DisplayPort-0}
+monitor = ${monitor.1}
 inherit = bartype/bspwm
 
 [bar/leftBorder1]
-monitor = ${env:MONITOR:DisplayPort-0}
+monitor = ${monitor.1}
 inherit = bartype/border1
 
+[bar/date1]
+monitor = ${monitor.1}
+inherit = bartype/dateBar
+
 [bar/active1]
-monitor = ${env:MONITOR:DisplayPort-0}
+monitor = ${monitor.1}
 inherit = bartype/activeBorder
 
 [bar/xwindow2]
-monitor = ${env:MONITOR:DisplayPort-1}
+monitor = ${monitor.2}
 inherit = bartype/xwindow
 
 [bar/bspwm2]
-monitor = ${env:MONITOR:DisplayPort-1}
+monitor = ${monitor.2}
 inherit = bartype/bspwm
 
 [bar/leftBorder2]
-monitor = ${env:MONITOR:DisplayPort-1}
+monitor = ${monitor.2}
 inherit = bartype/border1
 
 [bar/active2]
-monitor = ${env:MONITOR:DisplayPort-1}
+monitor = ${monitor.2}
 inherit = bartype/activeBorder
 
 [bar/xwindow3]
-monitor = ${env:MONITOR:DisplayPort-2}
+monitor = ${monitor.3}
 inherit = bartype/xwindow
 
 [bar/bspwm3]
-monitor = ${env:MONITOR:DisplayPort-2}
+monitor = ${monitor.3}
 inherit = bartype/bspwm
 
 [bar/leftBorder3]
-monitor = ${env:MONITOR:DisplayPort-2}
+monitor = ${monitor.3}
 inherit = bartype/border1
 
 [bar/active3]
-monitor = ${env:MONITOR:DisplayPort-2}
+monitor = ${monitor.3}
 inherit = bartype/activeBorder
 
 [bar/xwindow4]
-monitor = ${env:MONITOR:HDMI-A-0}
+monitor = ${monitor.4}
 inherit = bartype/xwindow
 
 [bar/bspwm4]
-monitor = ${env:MONITOR:HDMI-A-0}
+monitor = ${monitor.4}
 inherit = bartype/bspwm
 
 [bar/leftBorder4]
-monitor = ${env:MONITOR:HDMI-A-0}
+monitor = ${monitor.4}
 inherit = bartype/border1
 
 [bar/active4]
-monitor = ${env:MONITOR:HDMI-A-0}
+monitor = ${monitor.4}
 inherit = bartype/activeBorder
+
+[bar/date2]
+monitor = ${monitor.2}
+inherit = bartype/dateBar
+
+[bar/date3]
+monitor = ${monitor.3}
+inherit = bartype/dateBar
+
+[bar/date4]
+monitor = ${monitor.4}
+inherit = bartype/dateBar
+
+[bar/dateShadow1]
+monitor = ${monitor.1}
+inherit = bartype/dateBarShadow
+
+[bar/dateShadow2]
+monitor = ${monitor.2}
+inherit = bartype/dateBarShadow
+
+[bar/dateShadow3]
+monitor = ${monitor.3}
+inherit = bartype/dateBarShadow
+
+[bar/dateShadow4]
+monitor = ${monitor.4}
+inherit = bartype/dateBarShadow
+
+[bar/timeBar1]
+monitor = ${monitor.1}
+inherit = bartype/timeBar
+
+[bar/timeBar2]
+monitor = ${monitor.2}
+inherit = bartype/timeBar
+
+[bar/timeBar3]
+monitor = ${monitor.3}
+inherit = bartype/timeBar
+
+[bar/timeBar4]
+monitor = ${monitor.4}
+inherit = bartype/timeBar
+
+[bar/rightBorder1]
+monitor = ${monitor.1}
+inherit = bartype/border2
+
+[bar/rightBorder2]
+monitor = ${monitor.2}
+inherit = bartype/border2
+
+[bar/rightBorder3]
+monitor = ${monitor.3}
+inherit = bartype/border2
+
+[bar/rightBorder4]
+monitor = ${monitor.4}
+inherit = bartype/border2
+

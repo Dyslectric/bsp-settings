@@ -24,6 +24,19 @@ label-empty = %index%
 label-empty-background = ${colors.background-alt}
 label-empty-padding = ${elements.bspwmpad}
 
+[module/date]
+type = internal/date
+date = "%A,  %B %d,  %Y"
+
+[module/time]
+type = internal/date
+interval = 1
+
+time = " %I:%M  %p "
+
+format-prefix = 
+label = %time%
+
 [module/placeholder]
 type = custom/text
 content = ""
