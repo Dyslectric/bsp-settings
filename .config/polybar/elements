@@ -1,0 +1,40 @@
+[colors]
+foreground = #ffffffff
+background = #00000000
+foreground-alt = #F2F2F4 
+background-alt =  #c0242C38 
+black = #c0333B47 
+red = #c0F05656 
+green = #c02CC46E 
+yellow = #c0ECC46F 
+blue = #c06088DD 
+magenta = #c0FA5477 
+cyan = #c064B9F2 
+white = #c0D2D2D4 
+
+blackBorder = #f0333B47
+
+[elements]
+border = 3
+radius = 10
+gaps = 20
+
+height0 = 24
+height1 = 28
+height2 = 58
+height3 = 48
+width0 = 19.51%
+width1 = 19%
+
+
+yoffset0 = 50
+yoffset1 = 23
+yoffset2 = 10
+xoffset0 = 20
+xoffset1 = 25
+xoffset2 = 10
+
+font0 = Source Sans Pro:pixelsize=12;3
+font1 = Source Sans Pro:pixelsize=14;3
+
+bspwmpad = 4

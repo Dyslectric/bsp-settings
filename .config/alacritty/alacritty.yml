@@ -1,0 +1,51 @@
+#
+window:
+
+  padding:
+
+    x: 28
+    y: 26
+
+font:
+
+  normal:
+
+    family: DejaVu Sans Mono
+
+  size: 14.0
+
+colors:
+
+  primary:
+
+    background: '#242c38'
+    foreground: '#f2f2f4'
+
+  cursor:
+
+      text:       '#242c38'
+      cursor:     '#f2f2f4'
+
+  normal:
+
+      black:      '#333b47'
+      red:        '#f05656'
+      green:      '#2cc46e'
+      yellow:     '#ecc46f'
+      blue:       '#6088dd'
+      magenta:    '#fa5477'
+      cyan:       '#64b9f2'
+      white:      '#d2d2d4'
+
+  bright:
+
+      black:      '#424a56'
+      red:        '#ff6565'
+      green:      '#3bd37d'
+      yellow:     '#fbd37e'
+      blue:       '#6f97ec'
+      magenta:    '#ff6386'
+      cyan:       '#71c6ff'
+      white:      '#f1f1f3'
+
+background_opacity: .85

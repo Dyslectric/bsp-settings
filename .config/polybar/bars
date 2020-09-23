@@ -1,0 +1,63 @@
+[bar/xwindow1]
+monitor = ${env:MONITOR:DisplayPort-0}
+inherit = bartype/xwindow
+
+[bar/bspwm1]
+monitor = ${env:MONITOR:DisplayPort-0}
+inherit = bartype/bspwm
+
+[bar/leftBorder1]
+monitor = ${env:MONITOR:DisplayPort-0}
+inherit = bartype/border1
+
+[bar/active1]
+monitor = ${env:MONITOR:DisplayPort-0}
+inherit = bartype/activeBorder
+
+[bar/xwindow2]
+monitor = ${env:MONITOR:DisplayPort-1}
+inherit = bartype/xwindow
+
+[bar/bspwm2]
+monitor = ${env:MONITOR:DisplayPort-1}
+inherit = bartype/bspwm
+
+[bar/leftBorder2]
+monitor = ${env:MONITOR:DisplayPort-1}
+inherit = bartype/border1
+
+[bar/active2]
+monitor = ${env:MONITOR:DisplayPort-1}
+inherit = bartype/activeBorder
+
+[bar/xwindow3]
+monitor = ${env:MONITOR:DisplayPort-2}
+inherit = bartype/xwindow
+
+[bar/bspwm3]
+monitor = ${env:MONITOR:DisplayPort-2}
+inherit = bartype/bspwm
+
+[bar/leftBorder3]
+monitor = ${env:MONITOR:DisplayPort-2}
+inherit = bartype/border1
+
+[bar/active3]
+monitor = ${env:MONITOR:DisplayPort-2}
+inherit = bartype/activeBorder
+
+[bar/xwindow4]
+monitor = ${env:MONITOR:HDMI-A-0}
+inherit = bartype/xwindow
+
+[bar/bspwm4]
+monitor = ${env:MONITOR:HDMI-A-0}
+inherit = bartype/bspwm
+
+[bar/leftBorder4]
+monitor = ${env:MONITOR:HDMI-A-0}
+inherit = bartype/border1
+
+[bar/active4]
+monitor = ${env:MONITOR:HDMI-A-0}
+inherit = bartype/activeBorder

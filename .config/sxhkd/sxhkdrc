@@ -1,0 +1,111 @@
+# Terminal Emulator - Alacritty
+
+alt + Return
+	alacritty
+
+# Launcher - Rofi
+
+alt + x
+	rofi -show drun -monitor -1 -show-icons -icon-theme Papirus
+
+# Reload sxhkd
+
+alt + Escape
+	pkill -USR1 -x sxhkd
+
+# bspwm keys
+
+# restart bspwm
+
+alt + shift + r
+	bspc wm -r
+
+# close/kill program
+
+alt + {shift + ,shift + control + }q
+	bspc node -{c,k}
+
+# alternate tiled and monocle
+
+alt + m
+	bspc desktop -l next
+
+# swap current node and biggest window
+
+alt + g
+	bspc node -s biggest.window.local
+
+# change states
+
+alt + {t,shift + space}
+	bspc node -t {tiled,floating}
+
+alt + f
+	bspc node -t \~fullscreen
+
+# focus/swap
+
+# focus or move node
+
+alt + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus on parent node
+
+alt + a
+	bspc node -f @parent
+
+# focus on next/previous desktop on current monitor
+
+alt + {y,o}
+	bspc desktop -f {prev,next}.local
+
+# move node to next/previous desktop on current monitor
+
+alt + shift + {y,o}
+	bspc node -d {prev,next}.local --follow
+
+# focus on next/previous monitor
+
+alt + {u,i}
+	bspc monitor -f {prev,next}
+
+# move node to next/previous monitor
+
+alt + shift + {u,i}
+	bspc node -m {prev,next} --follow
+
+# put current application into tabbed
+
+#alt + w
+#	~/.scripts/tabscripts/maketabbed.sh
+
+# join tabbed
+
+#alt + control + {h,j,k,l}
+#	~/.scripts/tabscripts/jointabbed.sh {west,south,north,east}
+
+# launch firefox
+
+#control + n
+#	~/.scripts/firefoxtabs.sh
+
+# Add focuseed window to a tabbed instance in given direction
+
+alt + w; alt + {h,j,k,l}
+	~/.scripts/tabc.sh add {west,south,north,east} $(bspc query -N -n focused)
+
+# Remove tab
+
+alt + r
+	tabbed=$(bspc query -N -n focused); \
+	child=$(~/.scripts/tabc.sh list $tabbed | head -n1); \
+	~/.scripts/tabc.sh remove $child
+
+# Screenshooter
+
+alt + control + shift + s
+	flameshot gui
+
+alt + shift + s
+	flameshot screen

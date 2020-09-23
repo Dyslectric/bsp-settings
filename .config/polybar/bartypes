@@ -1,0 +1,72 @@
+[bartype/xwindow]
+width = ${elements.width0}
+height = ${elements.height0}
+offset-x = ${elements.xoffset0}
+offset-y = ${elements.gaps}
+
+background = ${colors.background-alt}
+foreground = ${colors.foreground-alt}
+
+line-size = ${elements.border}
+line-color = ${colors.red}
+
+border-size = ${elements.border}
+border-color = ${colors.magenta}
+
+padding-left = 3
+padding-right = 3
+
+font-0 = ${elements.font0}
+
+modules-left = xwindow
+
+[bartype/bspwm]
+pin-workspaces = true
+width = ${elements.width0}
+height = ${elements.height1}
+offset-x = ${elements.xoffset0}
+offset-y = ${elements.yoffset0} 
+
+background = ${colors.background-alt}
+foreground = ${colors.foreground-alt}
+
+line-size = ${elements.border}
+line-color = ${colors.white}
+
+border-size = ${elements.border}
+border-color = ${colors.white}
+border-top-size = 0
+
+font-0 = ${elements.font1}
+
+modules-left = bspwm
+
+[bartype/border1]
+width = ${elements.width0}
+height = ${elements.height2}
+offset-x = ${elements.xoffset1}
+offset-y = ${elements.yoffset1}
+
+background = ${colors.background}
+foreground = ${colors.background}
+
+border-color = ${colors.blackBorder}
+border-right-size = 5
+border-bottom-size = 5
+
+modules-left = placeholder
+
+[bartype/activeBorder]
+width = ${elements.width1}
+height = ${elements.height3}
+offset-x = ${elements.xoffset2}
+offset-y = ${elements.yoffset2}
+
+foreground = ${colors.background}
+background = ${colors.background}
+
+border-color = ${colors.white}
+border-left-size = 10
+border-top-size = 10
+
+modules-left = placeholder

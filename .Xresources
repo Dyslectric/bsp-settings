@@ -1,0 +1,5 @@
+! Colorscheme
+#include ".colors/blossom_bak"
+
+! Cursor Size
+Xcursor.size: 32
