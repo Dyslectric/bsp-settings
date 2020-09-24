@@ -19,6 +19,9 @@ bspc config pointer_modifier mod1
 bspc config pointer_action1 move
 bspc config pointer_action2 resize_corner
 
+bspc config focus_follows_pointer true
+bspc config pointer_follows_focus true
+
 picom &
 exec ~/.fehbg &
 exec ~/.config/polybar/scripty.sh &
@@ -27,4 +30,3 @@ sleep 0.3
 killall activeMonScript.sh
 exec .scripts/activeMonScript.sh &
 exec ~/.scripts/cleanfullscreen.sh &
-

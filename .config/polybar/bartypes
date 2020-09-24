@@ -20,6 +20,8 @@ font-0 = ${elements.font0}
 
 modules-left = xwindow
 
+wm-restack = bspwm
+
 [bartype/bspwm]
 pin-workspaces = true
 width = ${elements.width0}
@@ -41,6 +43,8 @@ font-0 = ${elements.font1}
 
 modules-left = bspwm
 
+wm-restack = bspwm
+
 [bartype/dateBar]
 width = ${elements.width2}
 height = ${elements.height4}
@@ -55,6 +59,8 @@ font-0 = ${elements.font1}
 radius = ${elements.radius}
 
 modules-center = date
+
+wm-restack = bspwm
 
 [bartype/timeBar]
 width = ${elements.width3}
@@ -72,6 +78,8 @@ font-0 = ${elements.font2}
 
 modules-center = time
 
+wm-restack = bspwm
+
 [bartype/border1]
 width = ${elements.width0}
 height = ${elements.height2}
@@ -86,6 +94,8 @@ border-right-size = 5
 border-bottom-size = 5
 
 modules-left = placeholder
+
+wm-restack = bspwm
 
 [bartype/border2]
 width = ${elements.width3}
@@ -102,6 +112,8 @@ border-bottom-size = 4
 
 modules-left = placeholder
 
+wm-restack = bspwm
+
 [bartype/dateBarShadow]
 width = ${elements.width2}
 height = ${elements.height4}
@@ -114,6 +126,8 @@ foreground = ${colors.background}
 radius = ${elements.radius}
 
 modules-center = placeholder
+
+wm-restack = bspwm
 
 [bartype/activeBorder]
 width = ${elements.width1}
@@ -129,3 +143,5 @@ border-left-size = 10
 border-top-size = 10
 
 modules-left = placeholder
+
+wm-restack = bspwm 
